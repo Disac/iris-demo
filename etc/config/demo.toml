@@ -1,0 +1,25 @@
+# 日志
+[logger]
+path="data/logs/go"
+name="go-frame-demo"
+
+# mysql
+[mysql]
+driver="mysql"
+address="user:password@tcp(address:3306)/database?parseTime=true&loc=Local"
+maxOpenConn=100
+maxIdleConn=100
+maxLifeTime=300
+
+[redis]
+addr="127.0.0.1:6379"
+pwd=""
+pool=10
+db=1
+
+# 默认配置
+[default]
+
+# 内部token
+[token]
+demo="wVGYnJyS6esTNft5BmA3xu1RkD92qIjL"

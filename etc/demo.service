@@ -1,0 +1,12 @@
+[Unit]
+Description=Process Monitoring and Control Daemon
+After=rc-local.service
+
+[Service]
+Type=forking
+ExecStart=/bin/supervisord -c /data/htdocs/go-frame-demo/config/demo.supervisord.conf
+ExecReload=/bin/supervisorctl -c /data/htdocs/go-frame-demo/config/demo.supervisord.conf reload
+SysVStartPriority=99
+
+[Install]
+WantedBy=multi-user.target
